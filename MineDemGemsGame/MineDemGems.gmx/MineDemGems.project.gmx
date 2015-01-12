@@ -9,6 +9,7 @@
     <sprite>sprites\spr_water</sprite>
     <sprite>sprites\Spr_dirt</sprite>
     <sprite>sprites\spr_playerWalk</sprite>
+    <sprite>sprites\spr_light1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_undergroundBG</background>
@@ -31,6 +32,7 @@
     <objects name="Grp_dynamic">
       <object>objects\obj_player</object>
     </objects>
+    <object>objects\obj_light</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
