@@ -25,10 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar dirtCount;
+            <string>MakeBlocks();
+globalvar dirtCount;
 dirtCount = 0;
 globalvar spawnDirt;
-spawnDirt = false;
+spawnDirt = true;
 globalvar seed;
 seed = "";
 globalvar save;
@@ -55,8 +56,7 @@ save = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if(dirtCount &gt; 5000)
+            <string>if(dirtCount &gt; 5000)
 {
     spawnDirt = false;
     if(save)
@@ -71,7 +71,8 @@ if(dirtCount &gt; 5000)
         save = false;
     }
 }
-show_debug_message("WORKING : " + string(dirtCount));
+
+//show_debug_message("WORKING : " + string(dirtCount));
 </string>
           </argument>
         </arguments>
@@ -94,8 +95,7 @@ show_debug_message("WORKING : " + string(dirtCount));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//room_restart();
-spawnDirt = true;
+            <string>room_restart();
 </string>
           </argument>
         </arguments>

@@ -6,7 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\Spr_Blocks</sprite>
+    <sprite>sprites\spr_water</sprite>
+    <sprite>sprites\Spr_dirt</sprite>
     <sprite>sprites\spr_playerWalk</sprite>
   </sprites>
   <backgrounds name="background">
@@ -14,26 +15,21 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Generate.gml</script>
+    <script>scripts\GenerateDirt.gml</script>
     <script>scripts\MakeBlocks.gml</script>
   </scripts>
   <objects name="objects">
+    <objects name="Grp_Control">
+      <object>objects\obj_control</object>
+      <object>objects\obj_waterSpawn</object>
+    </objects>
     <objects name="Grp_Blocks">
       <object>objects\obj_block</object>
-      <object>objects\obj_grass</object>
       <object>objects\obj_dirt</object>
-      <object>objects\obj_stone</object>
-      <object>objects\obj_redOre</object>
-      <object>objects\obj_blueOre</object>
-      <object>objects\obj_greenOre</object>
       <object>objects\obj_water</object>
     </objects>
     <objects name="Grp_dynamic">
       <object>objects\obj_player</object>
-    </objects>
-    <objects name="Grp_Control">
-      <object>objects\obj_control</object>
-      <object>objects\obj_createBlocks</object>
     </objects>
   </objects>
   <rooms name="rooms">

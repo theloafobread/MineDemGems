@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Initialize Variables
 grav = 0.2;
+watergrav = 0.1;
 hsp = 0;
 vsp = 0;
 jumpspeed = 4.5;
@@ -65,23 +66,34 @@ key_jump = keyboard_check_pressed(vk_space);
 move = key_left + key_right;
 hsp = move * movespeed;
 
-if (vsp &lt; 10) vsp += grav;
-
-if( place_meeting(x, y, obj_water) &amp;&amp; vsp &lt; 10)
+if (vsp &lt; 10)
 {
-    vsp += grav/2;
-    movespeed = 0.5;
+    
+    if(!place_meeting(x, y, obj_water))
+    {
+        movespeed = 1;
+        jumpspeed = 4.5;
+        vsp += grav;
+    }
+    else if(place_meeting(x, y, obj_water))
+    {
+        show_debug_message("falling at: " + string(vsp));
+        if(vsp&gt;1){
+        vsp -= watergrav;
+        }
+        else if(vsp&lt;1){
+        vsp += watergrav;
+        }
+    }
+    
 }
-else if(place_meeting(x, y, obj_water))
-{
-    movespeed = .4;
-    jumpspeed = 2;
-}
-else
+if(place_meeting(x, y, obj_water))
 {
     movespeed = 1;
-    jumpspeed = 4.5;
+    jumpspeed = 6;
+    
 }
+
 
 if (place_meeting(x,y+1,obj_dirt))
 {
