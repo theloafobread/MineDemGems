@@ -33,7 +33,7 @@
     </objects>
     <objects name="Grp_Control">
       <object>objects\obj_control</object>
-      <object>objects\obj_generate</object>
+      <object>objects\obj_createBlocks</object>
     </objects>
   </objects>
   <rooms name="rooms">

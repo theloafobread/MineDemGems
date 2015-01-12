@@ -28,7 +28,11 @@
             <string>globalvar dirtCount;
 dirtCount = 0;
 globalvar spawnDirt;
-spawnDirt = true;
+spawnDirt = false;
+globalvar seed;
+seed = "";
+globalvar save;
+save = true;
 </string>
           </argument>
         </arguments>
@@ -51,9 +55,23 @@ spawnDirt = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(dirtCount&gt;6000){
+            <string>
+if(dirtCount &gt; 5000)
+{
     spawnDirt = false;
+    if(save)
+    {
+        show_debug_message("SEED: " + string(seed)); 
+        
+        var seedFile;
+
+        seedFile=file_text_open_write("seed.txt");
+        file_text_write_string(seedFile,string(seed));
+        file_text_close(seedFile);
+        save = false;
+    }
 }
+show_debug_message("WORKING : " + string(dirtCount));
 </string>
           </argument>
         </arguments>
@@ -76,7 +94,8 @@ spawnDirt = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>//room_restart();
+spawnDirt = true;
 </string>
           </argument>
         </arguments>

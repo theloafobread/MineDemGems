@@ -50,7 +50,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Generate();
+            <string>if (spawnDirt)
+Generate();
 </string>
           </argument>
         </arguments>
