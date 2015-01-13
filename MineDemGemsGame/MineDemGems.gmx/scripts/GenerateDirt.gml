@@ -1,4 +1,3 @@
-randomize();
 var side;
 var r1;
 var done = false;

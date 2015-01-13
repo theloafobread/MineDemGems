@@ -51,20 +51,18 @@ alarm[0] = 20;
           <argument>
             <kind>1</kind>
             <string>//Water Physics
-//if(!place_meeting(x + 32, y, obj_water)  || !place_meeting(x-32, y, obj_water) || !place_meeting(x, y-32, obj_water) || !place_meeting(x, y+32, obj_water))
-//{
-    if(!place_meeting(x - 32, y, obj_block) &amp;&amp; place_meeting(x, y + 32, obj_block) &amp;&amp; !place_meeting(x, y + 32, obj_water)){
-        instance_create(x - 32, y, obj_water);
-    }
-    if(!place_meeting(x + 32, y, obj_block) &amp;&amp; place_meeting(x, y + 32, obj_block) &amp;&amp; !place_meeting(x, y + 32, obj_water)){
-        instance_create(x + 32, y, obj_water);
-    }
-    if(!place_meeting(x, y + 32, obj_block)){
-        instance_create(x, y + 32, obj_water);
-    }
-    
-    alarm[0] = 20;
-//}
+
+if(!place_meeting(x - 32, y, obj_block) &amp;&amp; place_meeting(x, y + 32, obj_block) &amp;&amp; !place_meeting(x, y + 32, obj_water)){
+    instance_create(x - 32, y, obj_water);
+}
+if(!place_meeting(x + 32, y, obj_block) &amp;&amp; place_meeting(x, y + 32, obj_block) &amp;&amp; !place_meeting(x, y + 32, obj_water)){
+    instance_create(x + 32, y, obj_water);
+}
+if(!place_meeting(x, y + 32, obj_block)){
+    instance_create(x, y + 32, obj_water);
+}
+
+alarm[0] = 20;
 </string>
           </argument>
         </arguments>

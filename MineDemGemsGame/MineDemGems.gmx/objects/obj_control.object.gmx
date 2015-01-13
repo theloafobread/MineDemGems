@@ -34,8 +34,6 @@ globalvar seed;
 seed = "";
 globalvar save;
 save = true;
-globalvar spawnWater;
-spawnWater = false;
 </string>
           </argument>
         </arguments>
@@ -63,24 +61,18 @@ spawnWater = false;
     spawnDirt = false;
     if(save)
     {
-        //show_debug_message("SEED: " + string(seed)); 
+        show_debug_message("SEED: " + string(seed)); 
         
-        //var seedFile;
-        //seedFile=file_text_open_write("seed.txt");
-        //file_text_write_string(seedFile,string(seed));
-        //file_text_close(seedFile);
-        save = false;
-        spawnWater = true;
-    }
-    
-}
-if(!spawnDirt &amp;&amp; !spawnWater)
-{
-    instance_deactivate_all(true);
-    instance_activate_region(view_xview[0], view_yview[0], view_wview[0], view_hview[0], true);
-}
-//show_debug_message( "FPS: "+string(fps));
+        var seedFile;
 
+        seedFile=file_text_open_write("seed.txt");
+        file_text_write_string(seedFile,string(seed));
+        file_text_close(seedFile);
+        save = false;
+    }
+}
+
+//show_debug_message("WORKING : " + string(dirtCount));
 </string>
           </argument>
         </arguments>

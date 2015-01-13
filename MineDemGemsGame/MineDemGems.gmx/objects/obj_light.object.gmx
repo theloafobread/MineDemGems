@@ -51,8 +51,10 @@ global.light3=surface_create(view_wview[0],view_hview[0])
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* 
-surface_set_target(global.light1)
+            <string>surface_set_target(global.light1)/*With this function you set all further drawing to
+                                the target surface rather than the screen and in this
+                                way you can tell GameMaker:Studio to only draw
+                                specific things to the specified surface.*/
                                 
 draw_clear_alpha(c_black,0.1)//That line make the screen black with an alpha at 0.85
 draw_set_blend_mode(bm_subtract)//We're starting to substract here
@@ -77,7 +79,10 @@ global.light1=surface_create(view_wview[0],view_hview[0])
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-surface_set_target(global.light2)
+surface_set_target(global.light2)/*With this function you set all further drawing to
+                                the target surface rather than the screen and in this
+                                way you can tell GameMaker:Studio to only draw
+                                specific things to the specified surface.*/
                                 
 draw_clear_alpha(c_black,0.2)//That line make the screen black with an alpha at 0.85
 draw_set_blend_mode(bm_subtract)//We're starting to substract here
@@ -102,7 +107,10 @@ global.light2=surface_create(view_wview[0],view_hview[0])
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-surface_set_target(global.light3)
+surface_set_target(global.light3)/*With this function you set all further drawing to
+                                the target surface rather than the screen and in this
+                                way you can tell GameMaker:Studio to only draw
+                                specific things to the specified surface.*/
                                 
 draw_clear_alpha(c_black,0.95)//That line make the screen black with an alpha at 0.85
 draw_set_blend_mode(bm_subtract)//We're starting to substract here
@@ -124,7 +132,7 @@ else
 {
 global.light3=surface_create(view_wview[0],view_hview[0])
 }
-*/
+
 </string>
           </argument>
         </arguments>
