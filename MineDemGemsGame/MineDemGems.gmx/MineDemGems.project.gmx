@@ -9,7 +9,6 @@
     <sprite>sprites\spr_water</sprite>
     <sprite>sprites\Spr_dirt</sprite>
     <sprite>sprites\spr_playerWalk</sprite>
-    <sprite>sprites\spr_light1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_undergroundBG</background>
@@ -21,11 +20,11 @@
   </scripts>
   <objects name="objects">
     <objects name="Grp_Control">
+      <object>objects\obj_block</object>
       <object>objects\obj_control</object>
       <object>objects\obj_waterSpawn</object>
     </objects>
     <objects name="Grp_Blocks">
-      <object>objects\obj_block</object>
       <object>objects\obj_dirt</object>
       <object>objects\obj_water</object>
     </objects>

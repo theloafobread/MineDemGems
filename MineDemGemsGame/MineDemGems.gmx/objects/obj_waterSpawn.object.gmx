@@ -46,6 +46,55 @@ for(xx = 0; xx &lt;2560; xx += 256){
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var counter = 0;
+if(spawnWater)
+{
+    show_debug_message("SPAWNING WATER BITCH");
+    
+    for(xx = 0; xx &lt;2560; xx += 32)
+    {
+        for(yy = 0; yy &lt; 6144; yy += 32)
+        {
+            if(!place_meeting(xx, yy-32, obj_dirt))
+            {
+                r1 = floor(random(250));
+                if(r1 == 0)
+                {
+                    if(!place_meeting(xx,yy,obj_dirt) || !place_meeting(xx,yy,obj_water))
+                    {
+                        instance_create(xx,yy,obj_water);
+                        counter++;
+                        show_debug_message(string(counter));    
+                    }
+                }
+            }
+        }
+    }
+    spawnWater = false;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

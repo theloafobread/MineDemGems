@@ -52,8 +52,11 @@
   </views>
   <instances>
     <instance objName="obj_control" x="0" y="0" name="inst_5A5E77D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="1152" y="-32" name="inst_DDB3B39A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="1184" y="32" name="inst_DDB3B39A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light" x="1152" y="320" name="inst_6C872BF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_waterSpawn" x="32" y="0" name="inst_2502B6F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_waterSpawn" x="32" y="0" name="inst_E6F1298F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control" x="0" y="0" name="inst_DD70E840" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
