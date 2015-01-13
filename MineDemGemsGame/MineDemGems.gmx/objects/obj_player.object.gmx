@@ -95,16 +95,16 @@ if(place_meeting(x, y, obj_water))
 }
 
 
-if (place_meeting(x,y+1,obj_dirt))
+if (place_meeting(x,y+1,obj_block))
 {
     vsp = key_jump * -jumpspeed;
 }
 
 
 //Horizontal Collision
-if (place_meeting(x+hsp,y,obj_dirt) )
+if (place_meeting(x+hsp,y,obj_block) )
 {
-    while(!place_meeting(x+sign(hsp),y,obj_dirt))
+    while(!place_meeting(x+sign(hsp),y,obj_block))
     {
         x += sign(hsp);
         show_debug_message("NOT HITTING DIRT");
@@ -116,9 +116,9 @@ if (place_meeting(x+hsp,y,obj_dirt) )
 x += hsp;
 
 //Vertical Collision
-if (place_meeting(x,y+vsp,obj_dirt))
+if (place_meeting(x,y+vsp,obj_block))
 {
-    while(!place_meeting(x,y+sign(vsp),obj_dirt))
+    while(!place_meeting(x,y+sign(vsp),obj_block))
     {
         y += sign(vsp);
     }

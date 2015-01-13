@@ -8,7 +8,7 @@ if(spawnDirt){
         side = floor(random(6));
         r1 = floor(random(2));
         if(side < 2){
-            if(!place_meeting(x + 32, y, obj_block)){
+            if(!place_meeting(x + 32, y, obj_block) && !place_meeting(x + 32, y, obj_water)){
                 if(r1 == 0){
                     instance_create(x+32, y, obj_dirt);
                     dirtCount++;
@@ -16,7 +16,7 @@ if(spawnDirt){
             }
         }
         else if(side == 2 || side == 3){
-            if(!place_meeting(x - 32, y, obj_block)){
+            if(!place_meeting(x - 32, y, obj_block) && !place_meeting(x - 32, y, obj_water)){
                 if(r1 == 0){
                     instance_create(x-32, y, obj_dirt);
                     dirtCount++;
@@ -24,7 +24,7 @@ if(spawnDirt){
             }
         }
         else if(side == 4){
-            if(!place_meeting(x, y + 32, obj_block)){
+            if(!place_meeting(x, y + 32, obj_block) && !place_meeting(x, y + 32, obj_water)){
                 if(r1 == 0){
                     instance_create(x, y+32, obj_dirt);
                     dirtCount++;
@@ -32,7 +32,7 @@ if(spawnDirt){
             }
         }
         else if(side == 5){
-            if(!place_meeting(x, y - 32, obj_block)){
+            if(!place_meeting(x, y - 32, obj_block) && !place_meeting(x, y - 32, obj_water)){
                 if(r1 == 0){
                     instance_create(x, y-32, obj_dirt);
                     dirtCount++;

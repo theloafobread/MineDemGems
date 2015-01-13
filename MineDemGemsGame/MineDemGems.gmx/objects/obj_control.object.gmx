@@ -34,6 +34,8 @@ globalvar seed;
 seed = "";
 globalvar save;
 save = true;
+globalvar waterCount;
+waterCount = 0;
 </string>
           </argument>
         </arguments>
@@ -56,7 +58,8 @@ save = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(dirtCount &gt; 5000)
+            <string>randomize();
+if(dirtCount &gt; 5000)
 {
     spawnDirt = false;
     if(save)

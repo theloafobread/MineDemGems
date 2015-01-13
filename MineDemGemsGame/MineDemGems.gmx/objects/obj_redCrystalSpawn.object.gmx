@@ -29,15 +29,10 @@
 var xx;
 var yy;
 
-for(i = 0; i &lt; 1; i++){
+for(i = 0; i &lt; 30; i++){
     xx = floor(random(80)) * 32;
-    yy = floor(random(3)) * 32;
-    //if(place_meeting(xx,yy+32,obj_block)){
-        instance_create(xx,yy,obj_water);
-   // }
-   // else{
-    //    i--;
-    //}
+    yy = floor(random(192)) * 32;
+    instance_create(xx,yy,obj_redCrystal);
 }
 </string>
           </argument>
