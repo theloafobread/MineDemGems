@@ -33,6 +33,9 @@ vsp = 0;
 jumpspeed = 4.5;
 movespeed = 1;
 sprSpeed = 0.2;
+
+globalvar canMine;
+canMine = false;
 </string>
           </argument>
         </arguments>
@@ -65,6 +68,10 @@ key_jump = keyboard_check_pressed(vk_space);
 //React to inputs
 move = key_left + key_right;
 hsp = move * movespeed;
+
+//view
+view_xview[0] = x - (view_wview[0]/2);
+view_yview[0] = y - (view_hview[0]/2);
 
 if (vsp &lt; 10)
 {
@@ -138,6 +145,14 @@ else if(hsp &lt; 0){
 else{
     image_speed = 0;
     image_index = 0;
+}
+
+//mining in circle
+if(sqrt(power((mouse_x - x), 2) + power((mouse_y - y), 2)) &lt; 60){
+    canMine = true;
+}
+else{
+    canMine = false;
 }
 
 </string>

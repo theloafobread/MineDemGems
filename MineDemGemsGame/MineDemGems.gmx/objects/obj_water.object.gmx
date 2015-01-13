@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>1</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -50,7 +50,7 @@
           <argument>
             <kind>1</kind>
             <string>//Water Physics
-if(waterCount&lt;10){
+if(waterCount&lt;200){
     if(!place_meeting(x - 32, y, obj_block) &amp;&amp; place_meeting(x, y + 32, obj_block) &amp;&amp; !place_meeting(x, y + 32, obj_water)){
         instance_create(x - 32, y, obj_water);
         waterCount++;
